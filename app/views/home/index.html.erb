@@ -1,4 +1,23 @@
 <div data-controller="google-map"
      data-google-map-api-key-value="<%= Rails.application.credentials.google_map_api_key %>"
      data-google-map-map-id-value="<%= Rails.application.credentials.google_map_map_id %>"
-     class="w-full h-[500px] mx-auto"></div>
+     class="w-full h-full flex">
+  <div class="card w-[600px] hidden" data-google-map-target="drawer">
+    <figure>
+      <img data-google-map-target="placePhoto" />
+    </figure>
+    <div class="card-body">
+      <h2 class="card-title" data-google-map-target="placeName"></h2>
+      <span data-google-map-target="placeRating"></span>
+      <p data-google-map-target="placeSummary"></p>
+      <div class="card card-compact bg-primary">
+        <div class="card-body">
+          <p class="font-bold">レビュー</p>
+          <div data-google-map-target="placeReviews" class="carousel rounded-box">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div data-google-map-target="map" class="w-full h-[800px]"></div>
+</div>
