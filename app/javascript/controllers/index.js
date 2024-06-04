@@ -9,3 +9,6 @@ application.register("google-map", GoogleMapController)
 
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
+
+import VoicevoxController from "./voicevox_controller"
+application.register("voicevox", VoicevoxController)
